@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Surot — Launch faster. Convert better.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200..400;1,200&family=Caveat:wght@600;700&family=Dancing+Script:wght@400..700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=Satisfy&family=Yellowtail&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200..400;1,200&family=Caveat:wght@600;700&family=Dancing+Script:wght@400..700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=Satisfy&family=Yellowtail&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200..400;1,200&family=Caveat:wght@600;700&family=Dancing+Script:wght@400..700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=Satisfy&family=Yellowtail&display=swap">
+  </noscript>
+  <link rel="stylesheet" href="style.css?v=4.2">
+  <style>
+    /* Responsive 120Hz/60Hz Ultra-Smooth Scroll Optimization */
+    html {
+      scroll-behavior: auto !important;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      touch-action: pan-y pinch-zoom;
+    }
+    html.lenis, html.lenis body {
+      height: auto;
+    }
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+    body {
+      touch-action: pan-y pinch-zoom;
+      -webkit-overflow-scrolling: touch;
+    }
+    .horizontal-wrapper,
+    .sticky-container,
+    .horizontal-slider,
+    .projects-carousel-wrapper {
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reusable SVG Icon Sprites for Extreme DOM Size Reduction -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
+    <symbol id="tech-bootstrap" viewBox="0 0 24 24"><path fill="#7952B3" d="M21.2 5.3c-.3-.9-.9-1.6-1.8-2.1C18.5 2.7 16.9 2.5 12 2.5S5.5 2.7 4.6 3.2c-.9.5-1.5 1.2-1.8 2.1C2.5 6.2 2.5 8.6 2.5 12s0 5.8.3 6.7c.3.9.9 1.6 1.8 2.1.9.5 2.5.7 7.4.7s6.5-.2 7.4-.7c.9-.5 1.5-1.2 1.8-2.1.3-.9.3-3.3.3-6.7s0-5.8-.3-6.7zm-8.8 11.2H9.2V7.5h3.2c1.4 0 2.4.3 3 .8.6.6.9 1.4.9 2.3 0 1-.4 1.8-1.1 2.3 1 .4 1.5 1.3 1.5 2.5 0 1.1-.4 2-1.1 2.6-.7.6-1.8.8-3.3.8zm-.2-5.4h-1.4V8.9h1.4c.8 0 1.3.1 1.6.4.3.3.5.7.5 1.2 0 .5-.2.9-.5 1.2-.3.3-.8.4-1.6.4zm.3 4.2h-1.7v-3.1h1.7c.9 0 1.5.1 1.8.4.3.3.5.8.5 1.2 0 .5-.2.9-.5 1.2-.3.3-.9.3-1.8.3z"/></symbol>
+    <symbol id="tech-wordpress" viewBox="0 0 24 24"><path fill="#fff" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18.2a8.2 8.2 0 0 1-5.1-1.8l3.7-10.2a1.3 1.3 0 0 1 1.2-.8c.4 0 .8.3 1 .7l2.5 6.8 1.4-4.5a1.1 1.1 0 0 1 1.1-.8 1 1 0 0 1 1 .8l.1.4-2.8 8.4a8.2 8.2 0 0 1-4.1 1.3zm6.6-4.6l-2-6a1 1 0 0 0-.9-.7 1 1 0 0 0-.9.7l-2.4 6.8-1.5-4.2.8-.1a.6.6 0 0 0 .5-.6.6.6 0 0 0-.6-.6H7.8a.6.6 0 0 0-.6.6.6.6 0 0 0 .6.6h.7l2.2 6a8.2 8.2 0 0 1-7-5.9 8.2 8.2 0 0 1 14.9-3.2z"/></symbol>
+    <symbol id="tech-shopify" viewBox="0 0 24 24"><path fill="#95BF47" d="M19.8 6.5s-.2-.2-.6-.2c-.3 0-1.8.1-1.8.1s-1.2-1.3-1.6-1.7c-.5-.4-1.3-.3-1.6-.2-.1 0-.3.1-.4.2-.3-.9-.9-1.8-1.9-2.2-.4-.2-.9-.2-1.3-.1-.3.1-.5.3-.7.5-.5.6-.7 1.5-.7 2.4 0 .3 0 .5.1.7l-2.3.7c-.7.2-.7.8-.7.8l-1.3 10c0 .2.1.4.3.5l8.6 3.6c.3.1.6.1.9 0l6.3-3.6c.2-.1.3-.3.3-.5l1.6-10.2c.1-.5-.6-.7-.6-.7zm-7.6-3.2c.5 0 .9.5 1 1.3 0 .2 0 .5-.1.8l-2.7.8c.2-.9.7-2.4 1.8-2.9zm.6 4.7l-1.8.5c-.1-.3-.2-.7-.2-1.1l2-.6c0 .4.1.8 0 1.2zm3.3 11l-5.6 2.3-1-7.7 6.4-1.8.2 7.2z"/></symbol>
+    <symbol id="tech-nextjs" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="black" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/><path d="M16.5 17.5L8.5 7h-1v10h1.8v-7.2l7.2 9.5a11 11 0 0 0 1-.3z" fill="white"/><path d="M15 7h1.8v5.5H15z" fill="white"/></symbol>
+    <symbol id="tech-supabase" viewBox="0 0 24 24"><path fill="#3ECF8E" d="M13.4 2.1c.4-.7 1.5-.4 1.5.4v9.2h6.8c.9 0 1.4 1.1.7 1.7L10.6 21.9c-.4.7-1.5.4-1.5-.4v-9.2H2.3c-.9 0-1.4-1.1-.7-1.7L13.4 2.1z"/></symbol>
+    <symbol id="tech-payload" viewBox="0 0 24 24"><path fill="#fff" d="M12.7 2.2a1.5 1.5 0 0 0-1.4 0L3.5 6.7a1.5 1.5 0 0 0-.8 1.3v9a1.5 1.5 0 0 0 .8 1.3l7.8 4.5a1.5 1.5 0 0 0 1.4 0l7.8-4.5a1.5 1.5 0 0 0 .8-1.3v-9a1.5 1.5 0 0 0-.8-1.3L12.7 2.2zm-1.2 3.1l5.8 3.3-5.8 3.4-5.8-3.4 5.8-3.3zm-6.8 5.4l5.8 3.4v6.8l-5.8-3.4V10.7zm8 10.2v-6.8l5.8-3.4v6.8l-5.8 3.4z"/></symbol>
+    <symbol id="tech-claude" viewBox="0 0 24 24"><path fill="#D97757" d="M12 2a1 1 0 0 1 1 1v2.5a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 15.5a1 1 0 0 1 1 1V21a1 1 0 0 1-2 0v-2.5a1 1 0 0 1 1-1zm9-6.5a1 1 0 0 1 0 2h-2.5a1 1 0 0 1 0-2H21zM5.5 11a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2h2.5zm12.9-6.4a1 1 0 0 1 1.4 1.4l-1.8 1.8a1 1 0 0 1-1.4-1.4l1.8-1.8zM6.2 16.4a1 1 0 0 1 1.4 1.4l-1.8 1.8a1 1 0 0 1-1.4-1.4l1.8-1.8zm12.2 0a1 1 0 0 1 0 1.4l-1.8 1.8a1 1 0 0 1-1.4-1.4l1.8-1.8a1 1 0 0 1 1.4 0zM7.6 4.6a1 1 0 0 1 0 1.4L5.8 7.8A1 1 0 0 1 4.4 6.4l1.8-1.8a1 1 0 0 1 1.4 0z"/></symbol>
+    <symbol id="tech-antigravity" viewBox="0 0 24 24"><path fill="#fff" d="M12 0c.5 6.2 5.8 11.5 12 12-6.2.5-11.5 5.8-12 12-.5-6.2-5.8-11.5-12-12 6.2-.5 11.5-5.8 12-12z"/></symbol>
+    <symbol id="tech-mikrotik" viewBox="0 0 24 24"><path fill="#fff" d="M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.2l6.8 3.8L12 11.8 5.2 8 12 4.2zM4.8 9.5l6.2 3.5v7.2l-6.2-3.4V9.5zm8.4 10.7V13l6.2-3.5v7.3l-6.2 3.4z"/></symbol>
+    <symbol id="tech-html" viewBox="0 0 24 24"><path fill="#E34F26" d="M3 2l1.6 18.2L12 23l7.4-2.8L21 2H3zm14.8 5.7h-8l.2 2.3h7.6l-.6 6.5-5 1.4-5-1.4-.3-3.8h2.3l.2 2 2.8.8 2.8-.8.3-3.4H6.8L6.2 5.4h11.8l-.2 2.3z"/></symbol>
+    <symbol id="tech-css" viewBox="0 0 24 24"><path fill="#1572B6" d="M3 2l1.6 18.2L12 23l7.4-2.8L21 2H3zm14.8 5.7h-8l.2 2.3h7.6l-.6 6.5-5 1.4-5-1.4-.3-3.8h2.3l.2 2 2.8.8 2.8-.8.3-3.4H6.8L6.2 5.4h11.8l-.2 2.3z"/></symbol>
+    <symbol id="tech-react" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(30 12 12)" stroke="#61DAFB" stroke-width="1.6" fill="none"/><ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(90 12 12)" stroke="#61DAFB" stroke-width="1.6" fill="none"/><ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(150 12 12)" stroke="#61DAFB" stroke-width="1.6" fill="none"/><circle cx="12" cy="12" r="1.8" fill="#61DAFB"/></symbol>
+    <symbol id="tech-tailwind" viewBox="0 0 24 24"><path fill="#38BDF8" d="M12 6c-2.7 0-4.4 1.3-5.1 4 .9-1.3 2-1.8 3.3-1.5.8.2 1.3.8 1.9 1.4C13.2 11 14.5 12 17.1 12c2.7 0 4.4-1.3 5.1-4-.9 1.3-2 1.8-3.3 1.5-.8-.2-1.3-.8-1.9-1.4C15.8 7 14.5 6 12 6zM6.9 12C4.2 12 2.5 13.3 1.8 16c.9-1.3 2-1.8 3.3-1.5.8.2 1.3.8 1.9 1.4 1.1 1.1 2.4 2.1 5 2.1 2.7 0 4.4-1.3 5.1-4-.9 1.3-2 1.8-3.3 1.5-.8-.2-1.3-.8-1.9-1.4C10.7 13 9.4 12 6.9 12z"/></symbol>
+    <symbol id="tech-typescript" viewBox="0 0 24 24"><rect width="22" height="22" x="1" y="1" rx="4" fill="#3178C6"/><path fill="#fff" d="M7 10h4.5v1.8H9.6v5.7H7.7v-5.7H7V10zm5.6 5.8c.4.5 1 .9 1.8.9.7 0 1.2-.3 1.2-.8 0-.5-.4-.7-1.4-1.1-1.3-.5-2.1-1.1-2.1-2.2 0-1.4 1.1-2.4 2.7-2.4 1.1 0 1.9.4 2.5 1l-.9 1.3c-.4-.4-.9-.7-1.6-.7-.6 0-1 .3-1 .7 0 .5.4.7 1.4 1.1 1.4.5 2.1 1.1 2.1 2.3 0 1.4-1.1 2.4-2.8 2.4-1.3 0-2.3-.5-2.9-1.2l1-1.2z"/></symbol>
+  </svg>
+
+  <!-- Moving Ambient Light Gradient -->
+  <div class="bg-ambient-gradient" id="bg-ambient-gradient" aria-hidden="true">
+    <div class="ambient-glow-orb glow-crimson"></div>
+    <div class="ambient-glow-orb glow-gold"></div>
+    <div class="ambient-glow-orb glow-ruby"></div>
+    <div class="ambient-glow-orb glow-amber"></div>
+  </div>
+
+  <!-- Background Falling Particle Canvas -->
+  <canvas id="bg-falling-particles" class="bg-falling-particles" aria-hidden="true"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon" aria-hidden="true">
+          <img src="logo.png" alt="Surot Roy Logo" class="nav-logo-img" width="32" height="32" decoding="async">
+        </span>
+        <span class="logo-text">Surot Roy</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#horizontal-wrapper" class="nav-link">Projects</a>
+        <a href="#our-work" class="nav-link">Why Surot</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn mode-toggle-btn" id="mode-toggle-btn" aria-label="Toggle Dark and White Mode" title="Switch to White Mode">
+          <svg class="mode-icon mode-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="mode-icon mode-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <div class="theme-switcher" id="theme-switcher">
+          <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Switch Color Theme" title="Theme: Vivid Crimson Rose (Click to change)">
+            <svg class="theme-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.5-.66 1.5-1.4 0-.36-.14-.7-.36-.97-.23-.27-.37-.62-.37-.99 0-.77.63-1.4 1.4-1.4h1.83c3.31 0 6-2.69 6-6 0-4.97-4.48-9.24-10-9.24z"></path>
+              <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+              <circle cx="12" cy="7.5" r="1.5" fill="currentColor"></circle>
+              <circle cx="16.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+            </svg>
+            <span class="theme-current-dot" id="theme-current-dot"></span>
+          </button>
+          <div class="theme-palette-dropdown" id="theme-palette-dropdown" aria-label="Theme Palette">
+            <button type="button" class="theme-swatch-dot active" data-theme-idx="0" title="Vivid Crimson Rose" style="--swatch-color: #FF0000;"></button>
+            <button type="button" class="theme-swatch-dot" data-theme-idx="1" title="Emerald Matrix" style="--swatch-color: #00FF00;"></button>
+            <button type="button" class="theme-swatch-dot" data-theme-idx="2" title="Sunset Amber / Gold" style="--swatch-color: #FFA500;"></button>
+            <button type="button" class="theme-swatch-dot" data-theme-idx="3" title="Blush Pink" style="--swatch-color: #FFC0CB;"></button>
+            <button type="button" class="theme-swatch-dot" data-theme-idx="4" title="Electric Royal Blue" style="--swatch-color: #0000FF;"></button>
+            <button type="button" class="theme-swatch-dot" data-theme-idx="5" title="Sky Blue" style="--swatch-color: #87CEEB;"></button>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="#horizontal-wrapper" class="mobile-link">Projects</a>
+      <a href="#our-work" class="mobile-link">Why Surot</a>
+      <a href="#process" class="mobile-link">Process</a>
+      <a href="#pricing" class="mobile-link">Pricing</a>
+      <a href="#faq" class="mobile-link">FAQ</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <div class="nav-actions mobile-nav-actions">
+        <button type="button" class="theme-toggle-btn mode-toggle-btn" aria-label="Toggle Dark and White Mode" title="Switch to White Mode">
+          <svg class="mode-icon mode-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="mode-icon mode-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <div class="theme-switcher">
+          <button type="button" class="theme-toggle-btn" aria-label="Switch Color Theme" title="Theme: Vivid Crimson Rose (Click to change)">
+            <svg class="theme-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.5-.66 1.5-1.4 0-.36-.14-.7-.36-.97-.23-.27-.37-.62-.37-.99 0-.77.63-1.4 1.4-1.4h1.83c3.31 0 6-2.69 6-6 0-4.97-4.48-9.24-10-9.24z"></path>
+              <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+              <circle cx="12" cy="7.5" r="1.5" fill="currentColor"></circle>
+              <circle cx="16.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+            </svg>
+            <span class="theme-current-dot"></span>
+          </button>
+          <div class="theme-palette-dropdown" aria-label="Theme Palette">
+            <button type="button" class="theme-swatch-dot active" data-theme-idx="0" title="Vivid Crimson Rose" style="--swatch-color: #FF0000;"></button>
+            <button type="button" class="theme-swatch-dot" data-theme-idx="1" title="Emerald Matrix" style="--swatch-color: #00FF00;"></button>
+            <button type="button" class="theme-swatch-dot" data-theme-idx="2" title="Sunset Amber / Gold" style="--swatch-color: #FFA500;"></button>
+            <button type="button" class="theme-swatch-dot" data-theme-idx="3" title="Blush Pink" style="--swatch-color: #FFC0CB;"></button>
+            <button type="button" class="theme-swatch-dot" data-theme-idx="4" title="Electric Royal Blue" style="--swatch-color: #0000FF;"></button>
+            <button type="button" class="theme-swatch-dot" data-theme-idx="5" title="Sky Blue" style="--swatch-color: #87CEEB;"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container Over Canvas -->
+  <main class="content-wrapper">
+
+    <!-- ── 1. HERO SECTION ── -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-grid">
+            <div class="hero-left hero-freedom-left">
+              <div class="hero-freedom-glow" aria-hidden="true"></div>
+
+              <div class="hero-smm-eyebrow reveal-pill">
+                <span class="eyebrow-star" aria-hidden="true">★</span>
+                <span class="eyebrow-light">THE</span>
+                <span class="eyebrow-accent">SOCIAL MEDIA MANAGER</span>
+                <span class="eyebrow-star" aria-hidden="true">★</span>
+              </div>
+
+              <div class="hero-freedom-title-stack">
+                <div class="hero-freedom-display reveal-heading">Surot<span class="hero-display-italic">Roy.</span></div>
+                <div class="hero-typewriter-wrap reveal-text" id="heroTypewriterWrap" data-roles='["Developer", "Creator", "Editor"]' aria-label="Role: Developer, Creator, Editor">
+                  <span class="hero-typewriter-text" id="heroTypewriterText">Developer</span><span class="hero-typewriter-cursor" aria-hidden="true">|</span>
+                </div>
+              </div>
+
+              <p class="hero-freedom-desc reveal-text">
+                Learn the exact step-by-step system to become a Social Media Manager, land clients, and build the life you actually want.
+              </p>
+
+              <div class="hero-freedom-cta-wrap reveal-btn">
+                <a href="#pricing" class="btn-freedom-enroll">
+                  <span class="btn-freedom-text">ENROLL NOW</span>
+                  <span class="btn-freedom-arrow-circle" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div class="hero-freedom-social-proof reveal-text">
+                <div class="student-proof-info">
+                  <div class="student-stars" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <div class="student-proof-text">Loved by <strong>over 500+ contented</strong> people .</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Right: Custom Showcase Frame -->
+            <div class="hero-right hero-showcase-column">
+              <div class="hero-showcase-card reveal-card-3d">
+                <div class="hero-showcase-glow"></div>
+                <div class="hero-showcase-img-wrap">
+                  <img src="hero_portrait.png" alt="Surot Roy Portrait" class="hero-showcase-img" loading="eager" fetchpriority="high" decoding="async">
+                  <div class="hero-showcase-overlay"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TECH STACK TICKER SECTION ── -->
+    <section class="tech-ticker-section" id="tech-stack">
+      <div class="container">
+        <div class="tech-ticker-wrapper">
+          <div class="tech-ticker-track">
+            <!-- Set 1 -->
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-bootstrap"></use></svg><span>Bootstrap</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-wordpress"></use></svg><span>WordPress</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-shopify"></use></svg><span>Shopify</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-nextjs"></use></svg><span>Next.js</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-supabase"></use></svg><span>Supabase</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-payload"></use></svg><span>Payload CMS</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-claude"></use></svg><span>Claude</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-antigravity"></use></svg><span>Antigravity</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-mikrotik"></use></svg><span>MikroTik API</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-html"></use></svg><span>HTML</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-css"></use></svg><span>CSS</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-react"></use></svg><span>React</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-tailwind"></use></svg><span>Tailwind CSS</span></div>
+            <div class="tech-pill"><svg width="18" height="18"><use href="#tech-typescript"></use></svg><span>TypeScript</span></div>
+
+            <!-- Set 2 (Seamless infinite loop duplicate) -->
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-bootstrap"></use></svg><span>Bootstrap</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-wordpress"></use></svg><span>WordPress</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-shopify"></use></svg><span>Shopify</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-nextjs"></use></svg><span>Next.js</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-supabase"></use></svg><span>Supabase</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-payload"></use></svg><span>Payload CMS</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-claude"></use></svg><span>Claude</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-antigravity"></use></svg><span>Antigravity</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-mikrotik"></use></svg><span>MikroTik API</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-html"></use></svg><span>HTML</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-css"></use></svg><span>CSS</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-react"></use></svg><span>React</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-tailwind"></use></svg><span>Tailwind CSS</span></div>
+            <div class="tech-pill" aria-hidden="true"><svg width="18" height="18"><use href="#tech-typescript"></use></svg><span>TypeScript</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT STATEMENT SECTION ── -->
+    <section class="about-statement-section" id="about">
+      <div class="container">
+        <div class="about-tag-col">
+          <div class="tag-pill">About Me</div>
+        </div>
+        <div class="about-statement-grid">
+          <div class="about-desc-col">
+            <p class="about-desc-text">
+              If you have a project in mind, check out my work and contact me to work together. Best of luck!
+            </p>
+          </div>
+          <div class="about-statement-col">
+            <h2 class="about-statement-text">
+              I <span class="highlight-coral">design</span> and deploy <span class="highlight-coral">AI solutions</span> with people at the core, ensuring every <span class="highlight-coral">system enhances</span> real user experiences.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HORIZONTAL SLIDER SHOWCASE ── -->
+    <div class="horizontal-wrapper" id="horizontal-wrapper">
+      <div class="sticky-container">
+        <div class="horizontal-header">
+          <h2 class="section-title"><span class="highlight-coral">Projects</span></h2>
+          <p>Scroll down to explore horizontal showcase &rarr;</p>
+        </div>
+        <div class="horizontal-slider" id="horizontal-slider">
+          <a href="https://surot.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Nexus Analytics Project Case Study">
+            <div class="project-img">
+              <img src="MY__2nd.site.png" alt="Nexus Analytics" loading="lazy" decoding="async">
+            </div>
+            <div class="project-info">
+              <h3>My secondary site</h3>
+              <p>I showcase my skills , projects and experiences in this site. Explore my work , learn more about my approach and methodologies.</p>
+              <span class="project-link">View Case Study <i class="fa-solid fa-arrow-up-right-from-square">↗</i></span>
+            </div>
+          </a>
+
+          <a href="https://loginpagebyhtmlandcss.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="AuthX Identity Project Case Study">
+            <div class="project-img">
+              <img src="Loing-page.png" alt="Auth Service Portal" loading="lazy" decoding="async">
+            </div>
+            <div class="project-info">
+              <h3>Login Page</h3>
+              <p>A login page for a Next-gen authentication gateway supporting passkeys encryption security.</p>
+              <span class="project-link">View Case Study <i class="fa-solid fa-arrow-up-right-from-square">↗</i></span>
+            </div>
+          </a>
+
+          <a href="https://radiant-pegasus-60378a.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Recarto Commerce Project Case Study">
+            <div class="project-img">
+              <img src="Site.in.png" alt="Recarto Project" loading="lazy" decoding="async">
+            </div>
+            <div class="project-info">
+              <h3>The site</h3>
+              <p>A personal portfolio website showcasing my work, skills, and experiences.</p>
+              <span class="project-link">View Case Study <i class="fa-solid fa-arrow-up-right-from-square">↗</i></span>
+            </div>
+          </a>
+
+          <a href="https://surot.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Nexus Analytics Project Case Study">
+            <div class="project-img">
+              <img src="MY__2nd.site.png" alt="Nexus Analytics" loading="lazy" decoding="async">
+            </div>
+            <div class="project-info">
+              <h3>My Secondary Site</h3>
+              <p>I showcase my skills , projects and experiences in this site. Explore my work , learn more about my approach and methodologies.</p>
+              <span class="project-link">View Case Study <i class="fa-solid fa-arrow-up-right-from-square">↗</i></span>
+            </div>
+          </a>
+
+          <a href="https://loginpagebyhtmlandcss.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="AuthX Identity Project Case Study">
+            <div class="project-img">
+              <img src="Loing-page.png" alt="Auth Service Portal" loading="lazy" decoding="async">
+            </div>
+            <div class="project-info">
+              <h3>Login Page</h3>
+              <p>A login page for a Next-gen authentication gateway supporting passkeys encryption security.</p>
+              <span class="project-link">View Case Study <i class="fa-solid fa-arrow-up-right-from-square">↗</i></span>
+            </div>
+          </a>
+
+          <a href="https://radiant-pegasus-60378a.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Recarto Commerce Project Case Study">
+            <div class="project-img">
+              <img src="Site.in.png" alt="Recarto Project" loading="lazy" decoding="async">
+            </div>
+            <div class="project-info">
+              <h3>The site</h3>
+              <p>A personal portfolio website showcasing my work, skills, and experiences.</p>
+              <span class="project-link">View Case Study <i class="fa-solid fa-arrow-up-right-from-square">↗</i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MY WORK INTERACTIVE SHOWCASE ── -->
+    <section class="section our-work-section" id="our-work">
+      <span id="why-us" class="section-anchor"></span>
+      <div class="container">
+        <div class="our-work-grid">
+          <div class="our-work-content">
+            <div class="our-work-header">
+              <h2 class="section-title"><span class="highlight-coral">Why Me?</span></h2>
+              <p>I combine clarity, trust, and high-performing design to deliver results that actually matter.</p>
+            </div>
+
+            <div class="our-work-list" id="our-work-list">
+              <div class="our-work-item" data-work-index="0" role="button" tabindex="0" aria-label="01 FreshBite Healthy Meal Delivery Startup">
+                <span class="work-serial">01</span>
+                <div class="work-item-text">
+                  <span class="work-brand">Implementation and tools</span>
+                  <span class="work-divider">&mdash;</span>
+                  <span class="work-desc">Streamlined process with the right tools to build fast and smart.</span>
+                </div>
+              </div>
+
+              <div class="our-work-item" data-work-index="1" role="button" tabindex="0" aria-label="02 NeuroSync AI-Powered Productivity App">
+                <span class="work-serial">02</span>
+                <div class="work-item-text">
+                  <span class="work-brand">High-converting</span>
+                  <span class="work-divider">&mdash;</span>
+                  <span class="work-desc">Clear structures that convert. Built in Figma, powered by Framer.</span>
+                </div>
+              </div>
+
+              <div class="our-work-item" data-work-index="2" role="button" tabindex="0" aria-label="03 CasaLuxe Modern Home Decor eCommerce">
+                <span class="work-serial">03</span>
+                <div class="work-item-text">
+                  <span class="work-brand">Clear steps and trust</span>
+                  <span class="work-divider">&mdash;</span>
+                  <span class="work-desc">Next steps from initial kick-off. Simple, honest communication.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Code Editor Showcase -->
+          <div class="our-work-mockup-col">
+            <div class="code-editor-card glass-card">
+              <div class="code-editor-header">
+                <div class="code-editor-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="code-editor-domain">www.surot.in</span>
+              </div>
+              <div class="code-editor-body">
+                <pre class="code-content"><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">'Surot Roy'</span>,
+  <span class="code-prop">role</span>: <span class="code-string">'Programming'</span>,
+  <span class="code-prop">coreStack</span>: [<span class="code-string">'TypeScript'</span>,<span class="code-string">'JAVA'</span>,<span class="code-string">'Node'</span>,<span class="code-string">'React'</span>,<span class="code-string">'MySQL'</span>],
+  <span class="code-prop">status</span>: <span class="code-string">'Building scalable systems'</span>,
+  <span class="code-func">compileCode</span>() {
+    <span class="code-keyword">return</span> <span class="code-string">'High performance achieved.'</span>;
+  }
+};
+<span class="code-comment">// Ready for challenge</span></code></pre>
+              </div>
+              <div class="code-editor-flare"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. THE PROCESS ── -->
+    <section class="section" id="process">
+      <div class="container process-timeline-container">
+        <div class="section-header text-center">
+          <div class="tag-pill">Process</div>
+          <h2 class="section-title">The Process Fast, Clear, Done</h2>
+          <p class="section-subtitle">
+            No endless revisions. No messy handoffs. Just a process that works and delivers fast.
+          </p>
+        </div>
+
+        <div class="timeline-track-wrap">
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-body">
+                <span class="timeline-tag">Phase 01 — Discovery &amp; Strategy</span>
+                <h3 class="timeline-title">Share Your Vision</h3>
+                <div class="timeline-company">Discovery &amp; Strategic Architecture</div>
+                <p class="timeline-desc">
+                  Hop on a quick call or fill out a brief. You tell us the "what", I figure out the "how" with wireframes, milestones, and technical specifications.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-body">
+                <span class="timeline-tag">Phase 02 — High-Fidelity Execution</span>
+                <h3 class="timeline-title">I Design &amp; Engineer It</h3>
+                <div class="timeline-company">High-Converting UI/UX &amp; Modern Web Stack</div>
+                <p class="timeline-desc">
+                  You get a clean, conversion-focused landing page tailored to your brand and goals, built with ultra-responsive mobile optimization and dynamic micro-animations.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="timeline-body">
+                <span class="timeline-tag">Phase 03 — Production Polish</span>
+                <h3 class="timeline-title">Ready to Launch</h3>
+                <div class="timeline-company">Deployment &amp; Growth-Ready Delivery</div>
+                <p class="timeline-desc">
+                  I deliver everything ready to launch with speed optimization, SEO configuration, and full asset packages. Use it to validate, scale, or grow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. FEATURED PROJECTS (HORIZONTAL SHOWCASE) ── -->
+    <section class="section projects-section" id="projects">
+      <span id="features" class="section-anchor"></span>
+      <span id="testimonials" class="section-anchor"></span>
+
+      <div class="projects-sticky-container">
+        <div class="container">
+          <div class="projects-header-row">
+            <div class="section-header text-left mb-0">
+              <div class="tag-pill-group">
+                <div class="tag-pill">Selected Work</div>
+                <div class="tag-pill tag-pill-green">Upcoming Projects</div>
+              </div>
+              <h2 class="section-title">Curated Projects &amp; Builds</h2>
+              <p class="section-subtitle text-left">
+                Explore recent client platforms, custom web applications, and high-converting SaaS products crafted with precision.
+              </p>
+            </div>
+
+            <div class="projects-nav-controls">
+              <div class="scroll-drag-hint">
+                <span class="drag-indicator-pulse"></span>
+                <span class="drag-text">Live Continuous Ticker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-carousel-wrapper">
+          <div class="projects-scroll-track" id="projects-scroll-track">
+            <article class="project-card glass-card" data-project-index="0">
+              <div class="project-card-top">
+                <span class="project-index">01</span>
+                <div class="project-preview-wrap">
+                  <img src="ABVP__lala.unit.png" alt="ABVP LALA UNIT" class="project-img" loading="lazy" decoding="async">
+                  <div class="project-img-sheen"></div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">ABVP LALA UNIT</h3>
+                <p class="project-desc">abvplalaunit.netlify.app — Official digital community and student welfare portal for ABVP Lala Unit, crafted by Surot Roy.</p>
+                <a href="https://abvplalaunit.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-live-link">
+                  <span>Visit live</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card glass-card" data-project-index="1">
+              <div class="project-card-top">
+                <span class="project-index">02</span>
+                <div class="project-preview-wrap">
+                  <img src="MY__2nd.site.png" alt="Surot Roy Portfolio" class="project-img" loading="lazy" decoding="async">
+                  <div class="project-img-sheen"></div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">MY SECONDARY SITE</h3>
+                <p class="project-desc">surot.netlify.app — Personal developer portfolio showcasing modern web engineering, interactive UI experiments, and production applications.</p>
+                <a href="https://surot.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-live-link">
+                  <span>Visit live</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card glass-card" data-project-index="2">
+              <div class="project-card-top">
+                <span class="project-index">03</span>
+                <div class="project-preview-wrap">
+                  <img src="Loing-page.png" alt="Surot Secondary Site" class="project-img" loading="lazy" decoding="async">
+                  <div class="project-img-sheen"></div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">LOGIN PAGE</h3>
+                <p class="project-desc">A login page for a Next-gen authentication gateway supporting passkeys encryption security.</p>
+                <a href="https://loginpagebyhtmlandcss.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-live-link">
+                  <span>Visit live</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card glass-card" data-project-index="3">
+              <div class="project-card-top">
+                <span class="project-index">04</span>
+                <div class="project-preview-wrap">
+                  <img src="1.jpg" alt="NeoPay Digital Platform" class="project-img" loading="lazy" decoding="async">
+                  <div class="project-img-sheen"></div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">UPCOMING</h3>
+                <p class="project-desc">High-frequency digital asset &amp; payment orchestration platform with instant settlements and analytics.</p>
+                <a href="#projects" class="project-live-link">
+                  <span>Visit live</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card glass-card" data-project-index="4">
+              <div class="project-card-top">
+                <span class="project-index">05</span>
+                <div class="project-preview-wrap">
+                  <img src="2.jpg" alt="Joyspoon E-Commerce Website" class="project-img" loading="lazy" decoding="async">
+                  <div class="project-img-sheen"></div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">UPCOMING</h3>
+                <p class="project-desc">High-converting custom Shopify direct-to-consumer store for national FMCG brand.</p>
+                <a href="#projects" target="_blank" rel="noopener noreferrer" class="project-live-link">
+                  <span>Visit live</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card glass-card" data-project-index="5">
+              <div class="project-card-top">
+                <span class="project-index">06</span>
+                <div class="project-preview-wrap">
+                  <img src="3.jpg" alt="Hotel Payroll SaaS Dashboard" class="project-img" loading="lazy" decoding="async">
+                  <div class="project-img-sheen"></div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">UPCOMING</h3>
+                <p class="project-desc">Automated attendance verification engine with cloud roster scheduling and encrypted ledger logs.</p>
+                <a href="#projects" class="project-live-link">
+                  <span>Visit live</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card glass-card" data-project-index="6">
+              <div class="project-card-top">
+                <span class="project-index">07</span>
+                <div class="project-preview-wrap">
+                  <img src="4.jpg" alt="Recarto AI SaaS Platform" class="project-img" loading="lazy" decoding="async">
+                  <div class="project-img-sheen"></div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">UPCOMING</h3>
+                <p class="project-desc">Automated funnel optimization and abandoned cart recovery with predictive consumer behavior models.</p>
+                <a href="#projects" class="project-live-link">
+                  <span>Visit live</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card glass-card" data-project-index="7">
+              <div class="project-card-top">
+                <span class="project-index">08</span>
+                <div class="project-preview-wrap">
+                  <img src="5.jpg" alt="NeoPay Digital Platform" class="project-img" loading="lazy" decoding="async">
+                  <div class="project-img-sheen"></div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">UPCOMING</h3>
+                <p class="project-desc">Ultra-low latency fintech infrastructure with zero-latency liquidity bridging and audit compliance.</p>
+                <a href="#projects" class="project-live-link">
+                  <span>Visit live</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6. PRICING ── -->
+    <section class="section" id="pricing">
+      <div class="pricing-bg-glow" aria-hidden="true"></div>
+      <div class="pricing-orbital-arc" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="tag-pill">Pricing</div>
+          <h2 class="section-title">Select your plan that fits</h2>
+          <p class="section-subtitle">
+            Whether you're launching your first idea or scaling your startup, Velocity has a plan that fits your pace.
+          </p>
+
+          <div class="pricing-billing-toggle">
+            <span class="billing-label active" id="billing-monthly">Monthly</span>
+            <button type="button" class="billing-switch" id="billing-switch-btn" aria-label="Toggle billing frequency">
+              <span class="billing-switch-indicator"></span>
+            </button>
+            <span class="billing-label" id="billing-yearly">Yearly <span class="discount-pill">Save 20%</span></span>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Starter Plan -->
+          <div class="pricing-card glass-card">
+            <div class="pricing-header">
+              <div class="plan-icon"></div>
+              <h3 class="plan-name">Starter Plan</h3>
+              <p class="plan-sub">Perfect for early-stage validation</p>
+              <div class="plan-price">
+                <span class="price-val" data-base-price="8000">₹8,000</span>
+                <span class="price-currency">INR</span>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li>✓ Custom Hero &amp; Section Design</li>
+              <li>✓ Responsive Mobile Optimization</li>
+              <li>✓ 3-4 Days Turnaround</li>
+              <li>✓ 2 Revisions Round</li>
+              <li>✓ Figma Asset Package</li>
+            </ul>
+            <button type="button" class="btn-glass w-full pricing-plan-btn" data-plan="Starter Plan" data-price="8000">Pay here</button>
+          </div>
+
+          <!-- Pro Plan (Featured) -->
+          <div class="pricing-card glass-card featured-pricing">
+            <div class="featured-badge">Most Popular</div>
+            <div class="pricing-header">
+              <div class="plan-icon featured-icon"></div>
+              <h3 class="plan-name">Pro Plan</h3>
+              <p class="plan-sub">Complete high-converting build</p>
+              <div class="plan-price">
+                <span class="price-val" data-base-price="20000">₹20,000</span>
+                <span class="price-currency">INR</span>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li>✓ All Starter Plan features</li>
+              <li>✓ AI-Powered Product Recommendations</li>
+              <li>✓ Dynamic Pricing</li>
+              <li>✓ Visual Search</li>
+              <li>✓ Automated Customer Support</li>
+              <li>✓ Fraud Detection</li>
+              <li>✓ Priority Email Support</li>
+            </ul>
+            <button type="button" class="btn-primary w-full glow-button pricing-plan-btn" data-plan="Pro Plan" data-price="20000">Pay here</button>
+          </div>
+
+          <!-- Surot's+ Plan -->
+          <div class="pricing-card glass-card">
+            <div class="pricing-header">
+              <div class="plan-icon"></div>
+              <h3 class="plan-name">Surot's+ Plan</h3>
+              <p class="plan-sub">For scaling startups and brands</p>
+              <div class="plan-price">
+                <span class="price-val" data-base-price="35000">₹35,000</span>
+                <span class="price-currency">INR</span>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li>✓ Multi-page Conversion Funnel</li>
+              <li>✓ Custom 3D &amp; Micro-interactions</li>
+              <li>✓ Full SEO &amp; Speed Optimization</li>
+              <li>✓ Analytics &amp; A/B Testing Setup</li>
+              <li>✓ Dedicated Priority Support</li>
+            </ul>
+            <button type="button" class="btn-glass w-full pricing-plan-btn" data-plan="Surot's+ Plan" data-price="35000">Pay here</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 7. FAQ ACCORDION ── -->
+    <section class="section faq-section-wrapper" id="faq">
+      <div class="faq-orbital-ripple" aria-hidden="true">
+        <div class="faq-center-glow"></div>
+        <div class="ripple-ring ring-1"></div>
+        <div class="ripple-ring ring-2"></div>
+        <div class="ripple-ring ring-3"></div>
+        <div class="ripple-ring ring-4"></div>
+      </div>
+
+      <div class="container max-w-3xl">
+        <div class="section-header text-center">
+          <div class="tag-pill">FAQs</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            I've answered the most common ones below. If you still need help, just reach out to me.
+          </p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item glass-card active">
+            <button class="faq-question">
+              <span>How long does it take to deliver my landing page?</span>
+              <span class="faq-icon">−</span>
+            </button>
+            <div class="faq-answer">
+              <p>I typically deliver your landing page within 5 to 7 business days, depending on the plan you choose. If you're on the Surot's+ plan, you'll get priority delivery in just 3 to 4 days—perfect if you're moving fast and need to go live sooner.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-card">
+            <button class="faq-question">
+              <span>What if I don't like the design?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>I work in iterative stages starting with wireframes and moodboards to ensure alignment before finalizing high-fidelity designs. Plus, all plans come with included revision rounds to guarantee satisfaction.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-card">
+            <button class="faq-question">
+              <span>Can I request revisions after delivery?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, absolutely! I provide support and revision cycles post-delivery to make sure every detail meets your standards.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-card">
+            <button class="faq-question">
+              <span>Do you help with copywriting too?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! High-converting design is nothing without sharp copy. Our Pro and Surot's+ tiers include conversion-focused headline and copy crafting.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-card">
+            <button class="faq-question">
+              <span>Is development included in the pricing?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, development in modern tools like Framer, Webflow, or clean HTML/CSS is included in our Pro and Surot's+ tiers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 8. BOTTOM CALL TO ACTION ── -->
+    <section class="section cta-section">
+      <div class="container text-center">
+        <h2 class="cta-title">
+          Is somthing in your mind<br>that actually works?
+        </h2>
+        <p class="cta-subtitle">
+          Let Surot design the landing page your idea deserves. Clean, strategic, and ready to grow.
+        </p>
+        <a href="mailto:surotroy794@gmail.com?subject=Inquiry%20from%20Website" class="btn-primary glow-button cta-btn-lg">
+          <svg class="btn-gmail-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+          </svg>
+          <span>Msg me via Email</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── 10. CONTACT SECTION ── -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-container">
+        <div class="contact-header-wrap">
+          <h2 class="contact-title"><span class="contact-title-gold">Contact Me</span></h2>
+        </div>
+
+        <div class="contact-layout-grid">
+          <div class="contact-left-col">
+            <div class="contact-info-cards">
+              <a href="mailto:surotroy794@gmail.com" class="contact-pill-card" target="_blank" rel="noopener noreferrer">
+                <div class="pill-card-left">
+                  <div class="pill-card-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#CD0404" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="4" width="20" height="16" rx="3"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </div>
+                  <div class="pill-card-text">
+                    <span class="pill-card-title">Email</span>
+                    <span class="pill-card-value">surotroy794@gmail.com</span>
+                  </div>
+                </div>
+                <div class="pill-card-arrow" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+              </a>
+
+              <a href="https://wa.me/918822898336?text=Hi%20Surot%2C%20I%20would%20like%20to%20discuss%20a%20project." class="contact-pill-card" id="contact-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                <div class="pill-card-left">
+                  <div class="pill-card-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#CD0404" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div class="pill-card-text">
+                    <span class="pill-card-title">Phone number</span>
+                    <span class="pill-card-value">+91 8822898336</span>
+                  </div>
+                </div>
+                <div class="pill-card-arrow" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+              </a>
+
+              <a href="https://maps.google.com/?q=Hailakandi,Assam,India" class="contact-pill-card" target="_blank" rel="noopener noreferrer">
+                <div class="pill-card-left">
+                  <div class="pill-card-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#CD0404" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="pill-card-text">
+                    <span class="pill-card-title">Location</span>
+                    <span class="pill-card-value">Hailakandi,Assam,India</span>
+                  </div>
+                </div>
+                <div class="pill-card-arrow" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-right-col">
+            <form class="contact-form-wrap" id="contact-form" onsubmit="handleContactSubmit(event)">
+              <div class="contact-field-wrap">
+                <input type="text" id="contact-name" name="name" class="contact-input" placeholder="Name" required autocomplete="name">
+              </div>
+              <div class="contact-field-wrap">
+                <input type="email" id="contact-email" name="email" class="contact-input" placeholder="Email" required autocomplete="email">
+              </div>
+              <div class="contact-field-wrap">
+                <textarea id="contact-message" name="message" class="contact-textarea" placeholder="Message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="contact-send-btn" id="contact-send-btn">
+                <svg class="whatsapp-btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                <span>Let's Discuss on WhatsApp</span>
+                <span class="send-btn-arrow">→</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 11. FOOTER ── -->
+    <footer class="footer">
+      <div class="footer-glow-bar"></div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#hero" class="nav-logo">
+              <span class="logo-icon" aria-hidden="true">
+                <img src="logo.png" alt="Surot Roy Logo" class="nav-logo-img" width="32" height="32" decoding="async">
+              </span>
+              <span class="logo-text">Surot Roy</span>
+            </a>
+            <p class="footer-tagline">
+              Helping founders launch faster with high-converting landing pages.<br>
+              <span class="footer-subtext">Let's Build Something Great.</span>
+            </p>
+            <a href="#pricing" class="btn-primary btn-sm mt-4">Start Now</a>
+          </div>
+
+          <div class="footer-nav-col">
+            <h4 class="footer-heading">Menu</h4>
+            <ul class="footer-list">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#features">Work</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#faq">FAQs</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-col">
+            <h4 class="footer-heading">Explore Surot</h4>
+            <ul class="footer-list">
+              <li><a href="#why-us">Why Surot</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#projects">Projects</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">© 2026 Surot Roy. All rights reserved.</p>
+          <div class="social-links">
+            <a href="#" aria-label="X (Twitter)" title="X (Twitter)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/itz_surot_yt/?__pwa=1#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/photo/?fbid=683725171321695&set=a.113165778377640&__tn__=%3C" class="social-link-facebook" aria-label="Facebook" title="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link-linkedin" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link-github" aria-label="GitHub" title="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ── Interactive UPI Payment Modal (surotroy794@okicici) ── -->
+    <div class="upi-modal-backdrop" id="upi-payment-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="upi-modal-title">
+      <div class="upi-modal-card glass-card">
+        <button type="button" class="upi-modal-close-btn" id="upi-modal-close" aria-label="Close payment modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="upi-modal-header">
+          <div class="upi-badge-row">
+            <span class="upi-logo-tag">UPI • Instant Pay</span>
+            <span class="upi-secure-badge">🔒 100% Secure</span>
+          </div>
+          <h3 class="upi-modal-title" id="upi-modal-title">Pay with UPI</h3>
+          <p class="upi-modal-subtitle">Scan the dynamic QR code with any UPI app or click the button below to pay directly.</p>
+        </div>
+
+        <div class="upi-plan-summary-box">
+          <div class="upi-plan-name-wrap">
+            <span class="upi-plan-label">SELECTED PLAN</span>
+            <span class="upi-plan-name" id="upi-modal-plan-name">Starter Plan</span>
+          </div>
+          <div class="upi-plan-amount-wrap">
+            <span class="upi-plan-label">AMOUNT</span>
+            <span class="upi-plan-price" id="upi-modal-price-val">₹8,000</span>
+          </div>
+        </div>
+
+        <div class="upi-qr-wrapper">
+          <div class="upi-qr-frame">
+            <img id="upi-qr-image" class="upi-qr-img" src="" alt="UPI Payment QR Code" width="190" height="190" loading="eager" decoding="async">
+            <div class="upi-qr-scanner-line"></div>
+          </div>
+          <div class="upi-qr-hint">Scan with Google Pay, PhonePe, Paytm, or BHIM</div>
+        </div>
+
+        <div class="upi-id-copy-box">
+          <div class="upi-id-info">
+            <span class="upi-id-label">UPI ID:</span>
+            <span class="upi-id-text" id="upi-id-text">surotroy794@okicici</span>
+          </div>
+          <button type="button" class="upi-copy-btn" id="upi-copy-btn" title="Copy UPI ID">
+            <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span class="copy-btn-text" id="upi-copy-text">Copy</span>
+          </button>
+        </div>
+
+        <div class="upi-modal-actions">
+          <a href="#" class="upi-direct-pay-btn" id="upi-direct-pay-link">
+            <span>Pay via UPI App</span>
+            <span class="upi-btn-arrow">→</span>
+          </a>
+        </div>
+
+        <div class="upi-modal-footer-note">
+          Payee: <strong>Surot Roy</strong> • ID: <strong>surotroy794@okicici</strong>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Interactive Cursor Elements -->
+  <div id="cursor-glow" class="cursor-glow"></div>
+  <div id="cursor-ring" class="cursor-ring"></div>
+  <div id="cursor-dot" class="cursor-dot"></div>
+
+  <script src="lenis.min.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      if (typeof Lenis === 'undefined') return;
+
+      const isMobile = window.innerWidth <= 768;
+
+      const lenis = new Lenis({
+        lerp: isMobile ? 0.095 : 0.085,
+        duration: isMobile ? 1.05 : 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1.0,
+        touchMultiplier: 1.2,
+        syncTouch: false,
+        infinite: false,
+        autoRaf: false
+      });
+
+      const masterLenis = lenis;
+
+      // Preserve masterLenis on window.__lenis across all screen sizes
+      Object.defineProperty(window, '__lenis', {
+        get() { return masterLenis; },
+        set(val) {
+          if (val && typeof val.raf === 'function' && val !== masterLenis) {
+            try { val.destroy(); } catch (e) {}
+          }
+        },
+        configurable: true,
+        enumerable: true
+      });
+
+      // Prevent duplicate instances if app.js instantiates Lenis
+      window.Lenis = function () {
+        return masterLenis;
+      };
+      window.Lenis.prototype = lenis.__proto__;
+
+      // Single dedicated high-precision RequestAnimationFrame loop
+      function raf(time) {
+        masterLenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+      // Re-calibrate metrics dynamically across window resize, device rotation & image loading
+      window.addEventListener('resize', () => masterLenis.resize(), { passive: true });
+      window.addEventListener('orientationchange', () => masterLenis.resize(), { passive: true });
+      window.addEventListener('load', () => masterLenis.resize(), { passive: true });
+
+      // Universal silky smooth internal anchor link gliding across all devices
+      document.addEventListener('click', function (e) {
+        const anchor = e.target.closest('a[href^="#"]');
+        if (!anchor) return;
+        const href = anchor.getAttribute('href');
+        if (!href || href === '#' || href === '#!') return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          masterLenis.scrollTo(target, {
+            offset: -12,
+            duration: isMobile ? 0.85 : 1.15,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+          });
+        }
+      }, { capture: true });
+    })();
+  </script>
+  <script src="script.js?v=3.4" defer></script>
+  <script src="app.js?v=3.4" defer></script>
+</body>
+</html>
